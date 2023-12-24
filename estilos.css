@@ -1,0 +1,778 @@
+@import url('https://fonts.googleapis.com/css2?family=Geologica&family=Roboto:wght@100;300;400;500;700&display=swap');
+
+:root{
+    --main-color:#17bc0c;
+    --black: #13131a;
+    --bg: #edfaf2;
+    --border: .1rem solid rgba(8, 60, 4, 0.3);
+}
+
+*{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: .2s linear;
+}
+
+html{
+    font-size: 65%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+    width: .8rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: #011e0a;
+    border-radius: 5rem;
+}
+
+body{
+    background: #76b041;
+}
+
+section{
+    padding: 2rem 7%;
+}
+
+.header{
+    background: #486b00;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 2%;
+    border-bottom: var(--border);
+    position: fixed;
+    top: 0; left:0; right: 0;
+    z-index: 1000;
+}
+
+.header .logo img{
+    height: 8rem;
+}
+
+.header .navbar a{
+    margin:0 1rem;
+    display:inline-block;
+    padding: 30px 90px 22px 0;
+    font-size: 1.8rem;
+    color: #fefefe;
+}
+
+.header .navbar a:hover{
+    color: #d0e50f;
+    /*border-bottom: .1rem solid var(--main-color);*/
+    padding-bottom: .5rem;
+}
+
+.header .icons div{
+    color: #fff;
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+}
+
+.header .icons div:hover{
+    color:#d0e50f
+}
+
+#menu-btn{
+    display: none;
+}
+
+@media (max-width:991px){
+    html{
+        font-size: 55%;
+    }
+
+    .header{
+        padding: 1.5rem 2rem;
+    }
+
+    section{
+        padding: 2rem;
+    }
+}
+
+@media (max-width:991px){
+    #menu-btn{
+        display: inline-block;
+    }
+
+    .header .navbar{
+        position: absolute;
+        top: 100%; right: -100%;
+        background: #fff;
+        width: 30rem;
+        height: calc(100vh - 9.5rem);
+    }
+
+    .header .navbar.active{
+        right: 0;
+    }
+
+    .header .navbar a{
+        color:#7d4427;
+        display: block;
+        margin: 1.5rem;
+        padding: .5rem;
+        font-size: 2rem;
+    }
+
+    .home{
+        background-position: left;
+        justify-content: center;
+        text-align: center;
+        padding-top: 10rem; /* Ajusta según sea necesario */
+        /*background: url('ruta-a-tu-imagen-de-fondo.jpg') no-repeat center center/cover;*/
+    }
+
+    .home .content h3{
+        font-size: 4.5rem;
+        color: #ffffff;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Agrega sombra al texto */
+    }
+
+    .home .content p{
+        font-size: 1.5rem;
+        color: #ffffff; /* Cambia a blanco o un color claro que contraste */
+        text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5); /* Sombras más suaves para el párrafo */
+        background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para mejorar la legibilidad */
+        display: inline-block; /* O cualquier otro display que prefieras */
+        padding: 0.5rem; /* Espaciado interno para que el fondo no toque directamente el texto */
+        border-radius: 0.5rem; /* Opcional: bordes redondeados para el fondo del texto */
+    }
+}
+
+.home{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    padding-top: 10rem; /* Ajusta según sea necesario */
+    background: url(images/fondo.jpg) no-repeat center center/cover;
+
+}
+
+.heading{
+    text-align: center;
+    color: #010201;
+    text-transform: uppercase;
+    padding-bottom: 3.5rem;
+    font-size: 4rem;
+}
+
+.heading span{
+    color: #e8dad4;
+    text-transform: uppercase;
+}
+
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 15px 12px;
+    font-size: 1.7rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  
+.btn:hover {
+    background-color: #45a049;
+    letter-spacing: .2rem;
+}
+  
+.btn:active {
+    background-color: #3e8e41;
+}
+
+.home .content{
+    max-width: 60rem;
+}
+
+.home .content h3{
+    font-size: 6rem;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Agrega sombra al texto */
+}
+
+.home .content p{
+    font-size: 2rem;
+    font-weight: lighter;
+    line-height: 1.8;
+    padding: 1rem 0;
+    color: #ffffff; /* Cambia a blanco o un color claro que contraste */
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5); /* Sombras más suaves para el párrafo */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para mejorar la legibilidad */
+    display: inline-block; /* O cualquier otro display que prefieras */
+    padding: 0.5rem; /* Espaciado interno para que el fondo no toque directamente el texto */
+    border-radius: 0.5rem; /* Opcional: bordes redondeados para el fondo del texto */
+}
+
+.row-vision{
+    display: flex;
+    align-items: center;
+    background: #dddf78;
+    flex-wrap: wrap;
+    margin: 30px 0
+}
+
+.row-vision .image{
+    flex: 1 1 45rem;
+}
+
+.row-vision .image img{
+    width: 100%;
+}
+
+.row-vision .content{
+    flex: 1 1 45rem;
+    padding: 2rem;
+}
+
+.row-vision .content h3{
+    font-size: 3rem;
+    color: #090707;
+}
+
+.row-vision .content p{
+    font-size: 1.6rem;
+    color: #050404;
+    padding: 1rem 0;
+    line-height: 1.8;
+}
+
+.row-mision{
+    display: flex;
+    align-items: center;
+    background: #dddf78;
+    flex-wrap: wrap;
+}
+
+.row-mision .image{
+    flex: 1 1 45rem;
+}
+
+.row-mision .image img{
+    width: 100%;
+}
+
+.row-mision .content{
+    flex: 1 1 45rem;
+    padding: 2rem;
+}
+
+.row-mision .content h3{
+    font-size: 3rem;
+    color: #090707;
+}
+
+.row-mision .content p{
+    font-size: 1.6rem;
+    color: #050404;
+    padding: 1rem 0;
+    line-height: 1.8;
+}
+
+.values-section {
+    text-align: center;
+    padding: 2rem;
+    background: #edf0b4; /* Color de fondo claro */
+    margin: 0 auto; /* esto centra la sección en la página */
+    max-width: 1200px; /* o el ancho máximo que prefieras */
+    margin: 0 auto; /* esto centra la sección en la página */
+    padding: 20px; /* esto añade un poco de espacio dentro de la sección */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* opcional: para darle un efecto de profundidad */
+}
+
+.values-heading {
+    font-size: 3rem;
+    color: #050404; /* Color oscuro para el título */
+    margin-bottom: 1rem;
+}
+
+.values-description {
+    font-size: 1.6rem;
+    color: #333;
+    margin-bottom: 2rem;
+    
+}
+
+.values-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.value-card {
+    width: calc(40% - 1rem); /* Ajusta el tamaño de la tarjeta según el ancho del contenedor y el espacio entre tarjetas */
+    background: #fff;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.value-card img {
+    width: 100%; /* Asegúrate de que la imagen se ajuste al ancho de la tarjeta */
+    height: auto; /* Mantén la relación de aspecto */
+    border-radius: 0.5rem; /* Opcional: bordes redondeados para la imagen */
+}
+
+.card-title {
+    color: #486b00;
+    font-size: 2rem;
+    margin-top: 0.5rem;
+}
+
+.card-text {
+    font-size: 1.6rem;
+    color: #333;
+    margin-top: 0.5rem;
+}
+
+/* .box img {
+    width: 78%;
+    height: 90px;  /*ajusta esta altura según tus preferencias 
+    object-fit: cover;  /*mantiene la relación de aspecto y cubre el contenedor 
+    max-width: 100%;
+    max-height: 200px;  /*ajusta esta altura según tus preferencias 
+    width: auto; /*garantiza que la anchura no exceda el tamaño máximo 
+    display: flex;
+    align-items: stretch;
+}  */
+
+
+.menu .box-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Esto crea 3 columnas */
+    gap: 1rem; /* Espacio entre las cajas */
+    justify-content: center; /* Centra el contenedor */
+    align-items: center; /* Alinea verticalmente */
+    max-width: 1200px; /* O el ancho máximo que prefieras */
+    margin: auto; /* Esto centra el contenedor en la página */
+}
+
+
+.menu .box-container .box{
+    padding: 2rem;
+    text-align: center;
+    border: 2px solid #ffffff; 
+}
+
+.menu .box-container .box img{
+    width: 80%; /* Asegura que la imagen ocupe todo el ancho de la caja */
+    height: auto; /* Mantiene la relación de aspecto de la imagen */
+    object-fit: cover; /* Cubre el área de la caja sin deformarse */
+}
+
+
+.menu .box-container .box h3{
+    color: #fff;
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+
+.menu .box-container .box .price{
+    color: #fff;
+    font-size: 2.5rem;
+    padding: 2rem 0;
+}
+
+.products .box-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Esto crea 3 columnas */
+    gap: 1.5rem; /* Espacio entre las cajas */
+    justify-content: center; /* Centra el contenedor */
+    align-items: center; /* Alinea verticalmente */
+    max-width: 1200px; /* O el ancho máximo que prefieras */
+    margin: auto; /* Esto centra el contenedor en la página */
+}
+
+.products .box .image img {
+    width: 100%; /* o un porcentaje menor para reducir su tamaño */
+    height: auto; /* para mantener la proporción de aspecto */
+    /* Agrega un poco de padding si es necesario */
+}
+
+
+.products .box-container .box{
+    text-align: center;
+    border: #ffffff;
+    padding: 1rem;
+}
+
+
+
+
+/*Estilos de la seccion productos*/
+.container{
+    max-width: 1200px;
+    margin:0 auto;
+    padding:3rem 2rem;
+}
+ 
+.container .products-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap:2rem;
+}
+ 
+.container .products-container .product{
+    text-align: center;
+    padding:3rem 2rem;
+    background: #fff;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    outline: .1rem solid #ccc;
+    outline-offset: -1.5rem;
+    cursor: pointer;
+}
+ 
+.container .products-container .product:hover{
+    outline: .2rem solid #222;
+    outline-offset: 0;
+}
+ 
+.container .products-container .product img{
+    height: 25rem;
+}
+ 
+.container .products-container .product:hover img{
+    transform: scale(.9);
+}
+ 
+.container .products-container .product h3{
+    padding:.5rem 0;
+    font-size: 2rem;
+    color:#444;
+}
+ 
+.container .products-container .product:hover h3{
+    color:#27ae60;
+}
+ 
+.container .products-container .product .price{
+    font-size: 2rem;
+    color:#444;
+}
+ 
+.products-preview{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    min-height: 100vh;
+    width: 100%;
+    background: rgba(0,0,0,.8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto; /* Permite desplazamiento en el eje Y */
+    z-index: 100; /* Asegura que esté por encima del resto del contenido */
+
+}
+
+.products-preview .preview{
+    display: none;
+    padding: 2rem;
+    text-align: center;
+    background: #fff;
+    position: relative;
+    margin:2rem;
+    width: 40rem;
+}
+ 
+/*.products-preview .preview{
+    display: none;
+    text-align: center;
+    background: #fff;
+    position: relative;
+    margin:2rem;
+    padding: 20px; /* Espaciado interior 
+    width: 80%; /* Ancho del 80% del contenedor 
+    max-width: 500px; /* Un ancho máximo para evitar que sea demasiado grande 
+    position: relative; /* Para posicionar absolutamente el botón de cierre 
+    z-index: 101; /* Asegura que esté por encima del fondo oscurecido 
+
+}*/
+ 
+.products-preview .preview.active{
+    display: inline-block;
+}
+ 
+.products-preview .preview img{
+    height: 20rem;
+}
+ 
+.products-preview .preview .fa-times{
+    position: absolute;
+    top:1rem; right:1.5rem;
+    cursor: pointer;
+    color:#444;
+    font-size: 4rem;
+}
+ 
+.products-preview .preview .fa-times:hover{
+    transform: rotate(90deg);
+}
+ 
+.products-preview .preview h3{
+    color:#444;
+    padding:.5rem 0;
+    font-size: 2.5rem;
+}
+ 
+.products-preview .preview .stars{
+    padding:1rem 0;
+    font-size: 1.7rem;
+}
+ 
+.products-preview .preview .stars i{
+    color:#27ae60;
+}
+ 
+.products-preview .preview .stars span{
+    color:#999;
+}
+ 
+.products-preview .preview p{
+    line-height: 1.5;
+    padding:1rem 0;
+    font-size: 1.6rem;
+    color:#777;
+}
+ 
+.products-preview .preview .price{
+    padding:1rem 0;
+    font-size: 2.5rem;
+    color:#27ae60;
+}
+ 
+.products-preview .preview .buttons{
+    display: flex;
+    gap:1.5rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+ 
+.products-preview .preview .buttons a{
+    flex:1 1 16rem;
+    padding:1rem;
+    font-size: 1.8rem;
+    color:#444;
+    border:.1rem solid #444;
+}
+ 
+.products-preview .preview .buttons a.cart{
+    background: #444;
+    color:#fff;
+}
+ 
+.products-preview .preview .buttons a.cart:hover{
+    background: #111;
+}
+ 
+.products-preview .preview .buttons a.buy:hover{
+    background: #444;
+    color:#fff;
+}
+
+ 
+@media (max-width:991px){
+ 
+    html{
+       font-size: 55%;
+    }
+ 
+}
+ 
+@media (max-width:768px){
+ 
+    .products-preview .preview img{
+       height: 25rem;
+    }
+ 
+}
+ 
+@media (max-width:450px){
+ 
+    html{
+       font-size: 50%;
+    }
+ 
+}
+
+
+
+/*Slider seccion*/
+.container-slider{
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+    overflow: hidden;
+    box-shadow: 0 0 0 10px #fff, 0 15px 50px;
+    position: relative;
+}
+
+.slider{
+    display: flex;
+    width: 500%;
+    height: 400px;
+    margin-left: -100%;
+}
+
+.slider__section{
+    width: 20%;
+}
+
+.slider__img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider__btn{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.7);
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    font-weight: bold;
+    font-family: monospace;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slider__btn:hover{
+    background: #fff;
+}
+
+.slider__btn--left{
+    left: 10px;
+}
+
+.slider__btn--right{
+    right: 10px;
+}
+
+@media (max-width: 768px) { /* o el breakpoint que prefieras */
+    .container-slider {
+        height: auto; /* o un valor específico más pequeño */
+    }
+}
+.slider__img {
+    width: 100%;
+    height: 100%;
+  
+}
+
+.blogs {
+    background-image: url('images/fondo-slider.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.heading-slider{
+    text-align: center;
+    color: #dde9dd;
+    text-transform: uppercase;
+    padding-bottom: 3.5rem;
+    font-size: 4rem;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+}
+
+.heading-slider span{
+    color: #f4b550;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+}
+
+/*Footer*/
+
+.pie-pagina{
+    width: 100%;
+    background-color: #0a141d;
+}
+.pie-pagina .grupo-1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:50px;
+    padding: 45px 0px;
+}
+.pie-pagina .grupo-1 .box figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pie-pagina .grupo-1 .box figure img{
+    width: 250px;
+}
+.pie-pagina .grupo-1 .box h2{
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 30px;
+}
+.pie-pagina .grupo-1 .box p{
+    color: #efefef;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+.pie-pagina .grupo-1 .red-social a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    margin-right: 10px;
+    background-color: #0d2033;
+    text-align: center;
+    transition: all 300ms ease;
+}
+.pie-pagina .grupo-1 .red-social a:hover{
+    color: aqua;
+}
+.pie-pagina .grupo-2{
+    background-color: #0a1a2a;
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+}
+.pie-pagina .grupo-2 small{
+    font-size: 15px;
+}
+@media screen and (max-width:800px){
+    .pie-pagina .grupo-1{
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap:30px;
+        padding: 35px 0px;
+    }
+}
+
